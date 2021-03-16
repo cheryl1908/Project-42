@@ -1,14 +1,17 @@
 class Clock{
-    constructor(){
+    constructor(angle,lineLength){
+        this.ang=angle;
+        this.length=lineLength;
+        this.color=random(0,255)
     }
-    scAngle=map(sc,0,20,0,360);
+   // scAngle=map(sc,0,20,0,360);
     display(){
         push();
-        rotate(scAngle);
-        stroke(255,0,0);
+        rotate(this.ang);
+        stroke(this.color,this.color,this.color);
         strokeWeight(7);
-        line(0,0,100,0);
-        angleMode(DEGREES);
+        line(0,0,this.length,0);
+        
         pop();
     }
 }
